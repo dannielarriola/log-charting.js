@@ -1,11 +1,15 @@
 {
   "name": "log-charting.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open source tool for parsing and charting logs files",
   "main": "src/log-charting.js",
   "scripts": {
     "liveserver": "node liveserver.js",
     "build": "gulp build && npm run liveserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannielarriola/log-charting.js.git"
   },
   "author": "@dannielarriola",
   "license": "ISC",
