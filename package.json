@@ -1,6 +1,6 @@
 {
   "name": "log-charting.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open source tool for parsing and charting logs files",
   "main": "src/log-charting.js",
   "scripts": {
