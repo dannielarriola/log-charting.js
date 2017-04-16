@@ -7,6 +7,10 @@
     "liveserver": "node liveserver.js",
     "build": "gulp build && npm run liveserver"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannielarriola/log-charting.js.git"
+  },
   "author": "@dannielarriola",
   "license": "ISC",
   "dependencies": {

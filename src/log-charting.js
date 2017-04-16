@@ -15,7 +15,7 @@ module.exports = {
         params.expMetric = params.expMetric || this.defaults.expMetric;
         params.file = params.file || this.defaults.file;
         params.canvas = params.canvas || this.defaults.canvas;
-        filereader('access.log', function(text){
+        filereader(params.file, function(text){
             var lines = text.split(/\n/);
             var data = {};
             lines.forEach(function(el){
