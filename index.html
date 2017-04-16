@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://v4-alpha.getbootstrap.com/examples/narrow-jumbotron/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./files/favicon.ico">
+
+    <title>log-charting.js</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./files/narrow-jumbotron.css" rel="stylesheet">
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/monokai-sublime.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- init log-charting.js -->
+    <script src="dist/log-charting.min.js"></script>
+
+    <!-- examples -->
+    <script>
+        logcharting.create({
+            expDate: /\[(\d{2}[./-]\w{3}[./-]\d{4})(.*)]/,
+            expMetric: /HTTP\/1.0"\s(\d+)/,
+            file: "access.log",
+            canvas: ".log-charting"
+        });
+    </script>
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dist/log-charting.min.js">Download</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">log-charting.js</h3>
+        </div>
+
+        <p>Open source tool for parsing and charting logs files</p>
+
+        <div class="jumbotron mk">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <pre>
+                <code class="javascript">
+//example code
+//logcharting.create(options);
+logcharting.create({
+    expDate: /\[(\d{2}[./-]\w{3}[./-]\d{4})(.*)]/,
+    expMetric: /HTTP\/1.0"\s(\d+)/,
+    file: "access.log",
+    canvas: ".log-charting"
+});
+                </code>
+            </pre>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <canvas class="log-charting">
+
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+       <div class="row">
+           <div class="col-12 text-center pb-5">
+               See <a href="access.log">access.log</a> file example
+           </div>
+       </div>
+
+       <h3 class="text-muted">Installation</h3>
+
+       <pre>
+           <code class="bash">
+    #!bin/bash
+    $ npm install log-charting.js
+           </code>
+       </pre>
+
+       <pre>
+           <code class="html">
+    &lt;!-- Include js --&gt;
+    &lt;script src="./node_modules/log-charting.js/dist/log-charting.min.js"&gt;&lt;/script&gt;
+           </code>
+       </pre>
+
+       <pre>
+           <code class="html">
+    &lt;!-- Add canvas tag --&gt;
+    &lt;canvas class="log-charting"&gt;&lt;/canvas&gt;
+           </code>
+       </pre>
+
+       <pre>
+                <code class="javascript">
+    //execute js code
+    logcharting.create({
+        expDate: /\[(\d{2}[./-]\w{3}[./-]\d{4})(.*)]/,
+        expMetric: /HTTP\/1.0"\s(\d+)/,
+        file: "access.log",
+        canvas: ".log-charting"
+    });
+                </code>
+            </pre>
+
+       <table class="table">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>Option</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>expDate</th>
+                    <td>Regular expression to get the date data in the log file</td>
+                </tr>
+                <tr>
+                    <th>expMetric</th>
+                    <td>Regular expression to get the Metrics data in the log file</td>
+                </tr>
+                <tr>
+                    <th>file</th>
+                    <td>Local log file path</td>
+                </tr>
+                <tr>
+                    <th>canvas</th>
+                    <td>Canvas selector</td>
+                </tr>
+            </tbody>
+       </table>
+
+        <footer class="footer">
+            <p>© danielarriola.com 2017</p>
+        </footer>
+
+    </div>
+    <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./files/ie10-viewport-bug-workaround.js"></script>
+
+
+</body>
+
+</html>

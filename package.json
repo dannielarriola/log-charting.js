@@ -1,0 +1,28 @@
+{
+  "name": "log-charting.js",
+  "version": "1.0.0",
+  "description": "Open source tool for parsing and charting logs files",
+  "main": "src/log-charting.js",
+  "scripts": {
+    "liveserver": "node liveserver.js",
+    "build": "gulp build && npm run liveserver"
+  },
+  "author": "@dannielarriola",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.5.0",
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "bundle-collapser": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
